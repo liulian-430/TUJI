@@ -1,0 +1,42 @@
+#!/bin/bash
+set -e
+
+echo "📦 正在初始化项目..."
+
+# 创建 package.json
+cat > package.json << 'EOF'
+{
+  "name": "tuji-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "crypto-js": "^4.2.0",
+    "js-cookie": "^3.0.8",
+    "lucide-react": "^0.314.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "uuid": "^14.0.1",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.8",
+    "vite-plugin-pwa": "^1.3.0"
+  }
+}
+EOF
+
+echo "✅ package.json 创建完成"
