@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Home, Sparkles, Map, User, Menu, X } from 'lucide-react'
-import CreateTripModal from './CreateTripModal'
+import CreateTripModal from './CreateTripModal.jsx'
 
 const DesktopNavBar = () => {
   const navigate = useNavigate()
